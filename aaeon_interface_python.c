@@ -11,14 +11,14 @@ static PyObject* aaeon_open_superio_py(PyObject *self, PyObject* args) {
 	return Py_BuildValue("i",result);
 }
 
-//static PyObject* Call_CFunction2(PyObject* self, PyObject* args){
-//	char* result;
-//	long int a;
-//	double b;
-//	if(!PyArg_ParseTuple(args,"ld",&a,&b)) return NULL;
-//	result = CFunction2(a,b);
-//	return Py_BuildValue("s",result);
-//}
+static PyObject* Call_CFunction2(PyObject* self, PyObject* args){
+	char* result;
+	long int a;
+	double b;
+	if(!PyArg_ParseTuple(args,"ld",&a,&b)) return NULL;
+	result = CFunction2(a,b);
+	return Py_BuildValue("s",result);
+}
 
 /****************************************************************
 　　　* Registration table *
